@@ -8,7 +8,7 @@
 export function NxWelcome({ title }: { title: string }) {
   return (
     <>
-      <h1>Module 1</h1>
+      <h1>{title}</h1>
     </>
   );
 }
