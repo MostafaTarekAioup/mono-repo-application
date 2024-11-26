@@ -1,12 +1,11 @@
+const nx = require('@nx/eslint-plugin');
 const baseConfig = require('../eslint.base.config.js');
-const playwright = require('eslint-plugin-playwright');
 
 module.exports = [
   ...baseConfig,
-
-  playwright.configs['flat/recommended'],
+  ...nx.configs['flat/react'],
   {
-    files: ['**/*.ts', '**/*.js'],
+    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     // Override or add rules here
     rules: {},
   },
